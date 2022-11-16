@@ -1,0 +1,1 @@
+    .equ    FPU,0    /* use FPU.. 1, don't use FPU.. 0 */

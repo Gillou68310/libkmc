@@ -1,0 +1,14 @@
+abs.o asin.o atan.o atbl.o atoi.o bsearch.o calloc.o cgets.o cputs.o 
+ctype.o div.o errno.o etbl.o exp.o fabs.o fmod.o free.o frexp.o getch.o 
+getchar.o getche.o gets.o getw.o itoa.o kbhit.o labs.o ldexp.o ldiv.o 
+log.o ltoa.o malloc.o matherr.o memccpy.o memchr.o memcmp.o memcpy.o 
+memicmp.o memmove.o memset.o modf.o pow.o printf.o putch.o putchar.o 
+puts.o putw.o qsort.o rand.o realloc.o scanf.o sin.o sinh.o sqrt.o stpcpy.o 
+strcat.o strchr.o strcmp.o strcpy.o strcspn.o strdup.o strerr.o stricmp.o 
+strlen.o strlwr.o strncat.o strncmp.o strncpy.o strnicmp.o strnset.o 
+strpbrk.o strrchr.o strrev.o strset.o strspn.o strstr.o strtok.o strtol.o 
+strtoul.o strupr.o tolower.o toupper.o ultoa.o ungetch.o syscall.o abort.o 
+_matherr.o _m_init.o _toa.o setjmp.o
+mcmpl.o mmuldi3.o mcvtld.o mcvtls.o 
+madddf3.o maddsf3.o mmuldf3.o mmulsf3.o ms2d.o mcmpl.o 
+md2s.o mneg.o mcmpd.o mcmps.o mcvts.o mcvtd.o 
