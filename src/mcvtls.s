@@ -68,7 +68,8 @@ fixsf3:
     li    $25,0x80000000
     and    $25,$25,$6
     beq    $25,$0,fixsf4
-    li    $6,0xffffffff
+    /*li    $6,0xffffffff*/
+    addiu $6, $0, -0x1
     xor    $3,$3,$6
     xor    $2,$2,$6
     addu    $3,$3,1
@@ -114,7 +115,8 @@ loc0:
     li    $4,0x80000000
     and    $25,$4,$3
     beq    $25,$0,fld0
-    li    $7,0xffffffff
+    /*li    $7,0xffffffff*/
+    addiu $7, $0, -0x1
     xor    $2,$2,$7
     xor    $3,$3,$7
     addu    $2,$2,1

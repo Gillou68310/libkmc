@@ -209,7 +209,8 @@ __divdi3:
     xor    $3,$3,$6
     and    $25,$8,$4
     beq    $25,$0,divdi1
-    li    $9,0xffffffff
+    /*li    $9,0xffffffff*/
+    addiu $9, $0, -0x1
     xor    $5,$5,$9
     xor    $4,$4,$9
     addu    $5,$5,1
@@ -218,7 +219,8 @@ __divdi3:
 divdi1:
     and    $25,$8,$6
     beq    $25,$0,divdi2
-    li    $9,0xffffffff
+    /*li    $9,0xffffffff*/
+    addiu $9, $0, -0x1
     xor    $7,$7,$9
     xor    $6,$6,$9
     addu    $7,$7,1
@@ -238,7 +240,8 @@ divdi64:
     jal    div64_64
     move    $31,$13
 divdi_ret:
-    li    $7,0xffffffff
+    /*li    $7,0xffffffff*/
+    addiu $7, $0, -0x1
     xor    $3,$3,$7
     xor    $2,$2,$7
     addu    $3,$3,1
@@ -262,7 +265,8 @@ __moddi3:
     move    $3,$4
     and    $25,$8,$4
     beq    $25,$0,moddi1
-    li    $9,0xffffffff
+    /*li    $9,0xffffffff*/
+    addiu $9, $0, -0x1
     xor    $5,$5,$9
     xor    $4,$4,$9
     addu    $5,$5,1
@@ -271,7 +275,8 @@ __moddi3:
 moddi1:
     and    $25,$8,$6
     beq    $25,$0,moddi2
-    li    $9,0xffffffff
+    /*li    $9,0xffffffff*/
+    addiu $9, $0, -0x1
     xor    $7,$7,$9
     xor    $6,$6,$9
     addu    $7,$7,1
@@ -294,7 +299,8 @@ moddi64:
     move    $3,$5
     move    $2,$4
 moddi_ret:
-    li    $7,0xffffffff
+    /*li    $7,0xffffffff*/
+    addiu $7, $0, -0x1
     xor    $3,$3,$7
     xor    $2,$2,$7
     addu    $3,$3,1
