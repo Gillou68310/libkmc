@@ -22,19 +22,19 @@ REG2 char *src;
 
     d=dest;
     if (((char *)src-(char *)d)&BUS_ERR_ALLIGN) {
-    while( (*((char *)d)++ = *((char *)src)++ ) != '\0');
+    while( (*d++ = *src++ ) != '\0');
     return dest;
     }
 
     while((int)d&3) {            /* ALLIGN 32bit */
-        if ((*((BYTE *)d)++ = *((BYTE *)src)++)==0) {
+        if ((*d++ = *src++)==0) {
             return dest;
     }
     }
 
 
     for(;;) {
-        data= *((DWORD *)src)++;        /* 32bit copy */
+        data= *((DWORD *)src); src = (char*)(((DWORD *)src) + 1); /* 32bit copy */
     if ((data&0xff000000)==0) {
         *d = 0;
         return dest;
@@ -44,11 +44,11 @@ REG2 char *src;
         return dest;
     }
     if ((data&0xff00)==0) {
-        *((WORD *)d)++ = data>>16;
+        *((WORD *)d) = data>>16; d = (char*)(((WORD *)d) + 1);
         *d=0;
         return dest;
     }
-    *((DWORD*)d)++ = data;
+    *((DWORD*)d) = data; d = (char*)(((DWORD *)d) + 1);
     if ((data & 0xff)==0) return dest;
     }
 
@@ -56,7 +56,7 @@ REG2 char *src;
 #else
     REG1 char * d;
     d=(char *)dest;
-    while( (*((char *)d)++ = *((char *)src)++ ) != '\0');
+    while( (*d++ = *src++ ) != '\0');
     return dest;
 #endif
 }
