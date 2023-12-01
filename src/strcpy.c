@@ -13,7 +13,7 @@
 
 char *strcpy(dest,src)
 char *dest;
-REG2 char *src;
+REG2 const char *src;
 {
 #if FAST_SPEED
     REG1 char * d;
